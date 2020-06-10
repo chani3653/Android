@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/HosName"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:background="#888888"
+                    android:gravity="center"
+
+                    android:text="Hospital Name"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/patientName"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#999999"
+                    android:gravity="center"
+
+                    android:text="Name"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/DoctorName"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#999999"
+                    android:gravity="center"
+
+                    android:text="Name"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+            </TableRow>
+        </TableLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#aaaaaa"
+                    android:gravity="center"
+
+                    android:text="Medical Information"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Clinician : " />
+
+                <EditText
+                    android:id="@+id/Clinician"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:text="License Number : " />
+
+
+                <EditText
+                    android:id="@+id/PC_LicenceNum"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Diagnostic history : " />
+
+                <RadioGroup
+
+                    android:id="@+id/DiagnosticHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/DiagnosticHistoryYes"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/DiagnosticHistoryNo"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="No" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/ExaminationDate"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_marginTop="10dp"
+
+                    android:text="Examination Date : " />
+
+                <Button
+                    android:id="@+id/EDDataPicker"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Date Picker" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Episode : " />
+
+                <RadioGroup
+                    android:id="@+id/Episode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/EpisodeVisit"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Visit" />
+
+                    <RadioButton
+                        android:id="@+id/EpisodePhone"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Phone" />
+
+                    <RadioButton
+                        android:id="@+id/EpisodeMail"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Mail" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="CVRM Type" />
+
+                <RadioGroup
+                    android:id="@+id/CVRM"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/CVRMCase"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Case" />
+
+                    <RadioButton
+                        android:id="@+id/CVRMCronic"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Chronic" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#aaaaaa"
+                    android:gravity="center"
+
+                    android:text="Patient Information"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Patient Name : " />
+
+                <EditText
+                    android:id="@+id/EditpatientName"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_weight="1"
+
+                    android:hint="환자 이름을 입력해 주세요."
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Patient number : " />
+
+
+                <EditText
+                    android:id="@+id/patientNumber"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_weight="1"
+
+                    android:hint="환자 번호를 입력해 주세요."
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Sex : " />
+
+                <RadioGroup
+                    android:id="@+id/Sex"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/SexMale"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/SexFemale"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Female" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/patientBirth"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="7dp"
+
+                    android:text="Date of Birth : " />
+
+                <Button
+                    android:id="@+id/PBDatePickerBtn"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Date Picker" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Tall :" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Weight :" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/Tall"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:layout_marginLeft="7dp"
+
+                            android:hint=""
+                            android:inputType="number"
+                            android:singleLine="true" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:gravity="center_vertical"
+
+                            android:text="CM" />
+
+                        <EditText
+                            android:id="@+id/Weight"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2"
+                            android:layout_marginRight="7dp"
+                            android:gravity="center_vertical"
+
+                            android:text="KG" />
+
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+
+                            android:text="BMI :"
+                            android:textStyle="bold"
+                            android:textSize="30dp"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:id="@+id/BMI"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+
+                            android:text="----"
+                            android:textSize="30dp"
+                            android:textAlignment="center"/>
+
+                        <Button
+                            android:id="@+id/BMIButton"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+
+                            android:text="calculate"/>
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Diabetes : " />
+
+                <RadioGroup
+
+                    android:id="@+id/Diabetes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/DiabetesNone"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="None" />
+
+                    <RadioButton
+                        android:id="@+id/DiabetesType1"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Type1" />
+
+                    <RadioButton
+                        android:id="@+id/DiabetesType2"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Type2" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="HxDM : " />
+
+                <RadioGroup
+                    android:id="@+id/HxDM"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/HxDMYes"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/HxDMNo"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="No" />
+
+                    <RadioButton
+                        android:id="@+id/HxDMPreDM"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Pre DM" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Family History of Early CHD : " />
+
+                <RadioGroup
+                    android:id="@+id/FamilyHistory"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/FamilyHistoryCHD"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="CHD" />
+
+                    <RadioButton
+                        android:id="@+id/FamilyHistoryStroke"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Stroke" />
+                </RadioGroup>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Treatment : " />
+
+                <RadioGroup
+                    android:id="@+id/Treatment"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/TreatmentYes"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/TreatmentNo"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="No" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/Treatment_TV"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Type of Medicine :  " />
+
+                <LinearLayout
+                    android:id="@+id/TreatmentLayout"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="7dp">
+
+                    <CheckBox
+                        android:id="@+id/TreamentStatin"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Statin"/>
+
+                    <CheckBox
+                        android:id="@+id/TreamentHTTx"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+
+                        android:text="HTTx"/>
+
+                    <CheckBox
+                        android:id="@+id/TreamentDMTx"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+
+                        android:text="DMTx"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/Smoking_TV"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Smoking Status? : " />
+
+                <RadioGroup
+                    android:id="@+id/Smoking"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/SmokingYes"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/SmokingNo"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="No" />
+                </RadioGroup>
+
+                <Spinner
+                    android:id="@+id/SmokingSpinner"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="7dp"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Systolic BP :" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Diastolic BP :" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/SystolicBP"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="0.7"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+
+                            android:text="mmHg" />
+
+                        <EditText
+                            android:id="@+id/DiadtolicBP"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+                            android:layout_marginRight="7dp"
+
+                            android:text="mmHg" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <TableRow>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:layout_weight="2"
+                            android:background="#aaaaaa"
+                            android:gravity="center"
+
+                            android:text="Laboratory Results"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Total cholesterol : " />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Glucose : " />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/TotalCholesterol"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="0.7"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+
+                            android:text="mg/dL" />
+
+                        <EditText
+                            android:id="@+id/Glucose"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+                            android:layout_marginRight="7dp"
+
+                            android:text="mg/dL" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+
+                            android:text="HDL : " />
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+
+                            android:text="LDL : " />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/HDL"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="0.74"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.26"
+                            android:gravity="center"
+
+                            android:text="mg/dL" />
+
+                        <EditText
+                            android:id="@+id/LDL"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.74"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.26"
+                            android:gravity="center"
+                            android:layout_marginRight="7dp"
+
+                            android:text="mg/dL" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Trigryceride : " />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/Trigryceride"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="0.89"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.11"
+                            android:layout_marginRight="7dp"
+                            android:gravity="center_vertical"
+
+                            android:text="mg/dL" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Calculate CVD Lisk" />
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Upload DB" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#aaaaaa"
+                    android:gravity="center"
+
+                    android:text="3D Simulation"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Image : " />
+
+                <RadioGroup
+                    android:id="@+id/Image"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ImageCT"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="CT" />
+
+                    <RadioButton
+                        android:id="@+id/ImageMRI"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="MRI" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="File Location : " />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Not Selected " />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:text="Number of Images : " />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <TableRow>
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:src="@mipmap/dummy"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="7dp"
+                            android:gravity="center_horizontal"
+
+                            android:text="Patient Model" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="7dp"
+                            android:gravity="center_horizontal"
+
+                            android:text="Simulation Result" />
+                    </TableRow>
+
+
+                    <TableRow>
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Calculate CVD Lisk" />
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Upload DB" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:layout_weight="1"
+                            android:background="#aaaaaa"
+                            android:gravity="center"
+
+                            android:text="Result"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+
+                            android:text="10 Year CVD Risk :" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Heart/Vascular Age :" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/XYearCVDLisk"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <EditText
+                            android:id="@+id/HVA"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Optimal Risk: " />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+
+                            android:text="Risk Score : " />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/OptimalLisk"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/LiskScore"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+
+                            android:text="----"
+                            android:textSize="30dp"
+                            android:textStyle="bold"/>
+
+                        <Button
+                            android:id="@+id/RiskCalBtn"
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.5"
+
+                            android:text="Calculate"
+                            android:textSize="12dp"/>
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#aaaaaa"
+                    android:gravity="center"
+
+                    android:text="Comments"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/Comment"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="7dp"
+                    android:gravity="top"
+
+                    android:inputType="textMultiLine"
+                    android:lines="5" />
+
+                <Button
+                    android:id="@+id/BackBtn"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:layout_weight="1"
+
+                    android:text="입력완료" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

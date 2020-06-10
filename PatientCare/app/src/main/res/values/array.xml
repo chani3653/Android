@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Smoking">
+        <item>ex-Smoker</item>
+        <item>Light-Smoker(Less then 10)</item>
+        <item>Moderate-Smoker (10 to 19)</item>
+        <item>Heavy Smoker (20 or Over)</item>
+    </string-array>
+</resources>

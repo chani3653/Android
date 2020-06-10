@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+
+            android:text="회원가입"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#cccccc"
+
+            android:text="로그인 정보"
+            android:textSize="13dp" />
+
+        <EditText
+            android:id="@+id/RegID"
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:hint="ID를 입력해주세요."
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/RegPW"
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:hint="비밀번호를 입력해주세요."
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="#cccccc"
+
+            android:text="개인 정보"
+            android:textSize="13dp" />
+
+        <EditText
+            android:id="@+id/RegName"
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:hint="이름을 입력해주세요."
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/LicenceNum"
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:hint="의사면허 번호를 입력해주세요."
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/Hospital"
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:hint="병원이름을 입력해주세요."
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/Department"
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:hint="진료과를 입력해주세요."
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/Adress"
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:hint="주소를 입력해주세요."
+            android:singleLine="true" />
+
+
+        <Button
+            android:id="@+id/RegBtn"
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+
+            android:text="회원가입" />
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
