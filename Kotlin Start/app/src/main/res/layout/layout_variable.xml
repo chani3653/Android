@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/starttimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="30dp"
+        android:text="Activity 시작시간"
+        app:layout_constraintBottom_toTopOf="@+id/clickCountLabel"
+        app:layout_constraintEnd_toEndOf="@+id/clickCountLabel" />
+
+    <TextView
+        android:id="@+id/clickCountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="307dp"
+        android:text="버튼이 클릭된 횟수"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="32dp"
+        android:text="클릭"
+        app:layout_constraintStart_toStartOf="@+id/clickCountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/clickCountLabel" />
+</androidx.constraintlayout.widget.ConstraintLayout>
