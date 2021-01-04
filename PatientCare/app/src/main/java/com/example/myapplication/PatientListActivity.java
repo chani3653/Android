@@ -32,10 +32,11 @@ public class PatientListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_patientcare);
 
         sqLiteDB = init_patient_database();
-        this.InitPatientList();
 
-        ListView listView = (ListView)findViewById(R.id.PatientList);
-        final PatientListAdapter patientListAdapter = new PatientListAdapter(this,Data);
+        InitPatientList();
+
+        ListView listView = (ListView) findViewById(R.id.PatientList);
+        final PatientListAdapter patientListAdapter = new PatientListAdapter(this, Data);
 
         listView.setAdapter(patientListAdapter);
 
@@ -48,9 +49,9 @@ public class PatientListActivity extends AppCompatActivity {
                 String PNum = cursor.getString(8);
                 //Toast.makeText(getApplicationContext(),PNum,Toast.LENGTH_SHORT).show();
 
-                Intent intent  = new Intent(getApplicationContext(),PatientCareEditActivity.class);
+                Intent intent = new Intent(getApplicationContext(), PatientCareEditActivity.class);
                 intent.putExtra("DBindex", PNum); // DB에서 찾는 방향으로 수정
-                startActivityForResult(intent,sub);
+                startActivityForResult(intent, sub);
 
                 //Toast.makeText(getApplicationContext(),String.valueOf(position),Toast.LENGTH_SHORT).show();
             }
@@ -76,23 +77,25 @@ public class PatientListActivity extends AppCompatActivity {
                             "Examination Date : " + cursor.getString(4)));
                 }
             }
+        } else {
+            Toast.makeText(getApplicationContext(), "데이터베이스가 없습니다. ", Toast.LENGTH_SHORT).show();
         }
-        else if (sqLiteDB == null){
-            Toast.makeText(getApplicationContext(),"데이터베이스가 없습니다. ",Toast.LENGTH_SHORT).show();
-        }
+        // DB 없을 때 오류 띄우는거 찾기
     }
 
     private SQLiteDatabase init_patient_database() {
         SQLiteDatabase db = null;
-        File file = new File(getFilesDir(),"Patient_Info.db");
+        File file = new File(getFilesDir(), "Patient_Info.db");
 
-        //Toast.makeText(getApplicationContext(),"PATH : " + file.toString(),Toast.LENGTH_LONG).show();
         try {
-            db = SQLiteDatabase.openOrCreateDatabase(file,null);
+            db = SQLiteDatabase.openOrCreateDatabase(file, null);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if (db == null) Toast.makeText(getApplicationContext(),"DB Creation failed. " + file.getAbsolutePath(),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),"PATH : " + file.toString(),Toast.LENGTH_LONG).show();
+
+        if (db == null)
+            Toast.makeText(getApplicationContext(), "DB Creation failed. " + file.getAbsolutePath(), Toast.LENGTH_SHORT).show();
         return db;
     }
 }
