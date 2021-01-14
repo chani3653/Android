@@ -47,7 +47,7 @@ public class PatientCareActivity extends Activity {
 
     Spinner Smoking_Spinner;
 
-    RadioGroup Diagostic_H_Radio, Episode_Radio, CVRM_Radio,Sex_Radio, Diabetes_Radio, HxDM_Radio, FamilyHistory_Radio,
+    RadioGroup Diagostic_H_Radio, Episode_Radio, CVRM_Radio, Sex_Radio, Diabetes_Radio, HxDM_Radio, FamilyHistory_Radio,
                 Treatment_Radio, Smoking_Radio, image_Radio;
 
     RadioButton Diagostic_H_Yes, Diagostic_H_No,
