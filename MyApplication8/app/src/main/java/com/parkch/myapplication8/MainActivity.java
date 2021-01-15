@@ -17,21 +17,21 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.apple) {
-            Toast.makeText(getApplicationContext(),"사과",Toast.LENGTH_SHORT).show();
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_refresh:
+                Toast.makeText(this, "refresh", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_search:
+                Toast.makeText(this, "search", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_settings:
+                Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        if (id == R.id.grape) {
-            Toast.makeText(getApplicationContext(),"포도",Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        if (id == R.id.banana) {
-            Toast.makeText(getApplicationContext(),"바나나",Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
