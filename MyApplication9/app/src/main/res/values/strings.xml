@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="new_game">new game</string>
+    <string name="only_i_can_change_my_life_no_one_can_do_it_for_me">Only I can change my life. No one can do it for me.</string>
 </resources>
